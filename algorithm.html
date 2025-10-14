@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Решение задачи 1012: Проверка неравенств</title>
+</head>
+<body>
+    <nav class="topnav">
+        <ul>
+            <li><a class="active" href="index.html">Главная</a></li>
+            <li><a style="color: brown" href="algorithm.html">Алгоритмическая задача</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Решение задачи 1012: Проверка неравенств</h1>
+
+        <div class="problem-statement">
+            <h2>Условие задачи:</h2>
+            <p>Даны вещественные числа: A, B, C. Определить, выполняются ли неравенства
+            <span class="highlight">A &lt; B &lt; C</span> или <span class="highlight">A &lt; B &gt; C</span>
+            и какое именно неравенство выполняется.</p>
+        </div>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="a">Число A:</label>
+                <input type="number" id="a" step="any" placeholder="Введите число A">
+            </div>
+
+            <div class="input-group">
+                <label for="b">Число B:</label>
+                <input type="number" id="b" step="any" placeholder="Введите число B">
+            </div>
+
+            <div class="input-group">
+                <label for="c">Число C:</label>
+                <input type="number" id="c" step="any" placeholder="Введите число C">
+            </div>
+        </div>
+
+        <button onclick="checkInequalities()">Проверить неравенства</button>
+
+        <div class="result-section">
+            <h2>Результат:</h2>
+            <div id="result"></div>
+        </div>
+
+    </div>
+
+    <script>
+        function checkInequalities() {
+            // Получаем значения из полей ввода
+            const a = parseFloat(document.getElementById('a').value);
+            const b = parseFloat(document.getElementById('b').value);
+            const c = parseFloat(document.getElementById('c').value);
+
+            // Проверяем, что все поля заполнены корректно
+            if (isNaN(a) || isNaN(b) || isNaN(c)) {
+                document.getElementById('result').innerHTML = '<p class="false">Пожалуйста, введите корректные числа во все поля.</p>';
+                return;
+            }
+
+            const resultDiv = document.getElementById('result');
+
+            // Проверяем первое неравенство: A < B < C
+            const firstInequality = (a < b) && (b < c);
+
+            // Проверяем второе неравенство: A < B > C
+            const secondInequality = (a < b) && (b > c);
+
+            // Формируем результат
+            let resultHTML = '';
+
+            if (firstInequality) {
+                resultHTML = `
+                    <p>Выполняется неравенство:</p>
+                    <div class="inequality true">A < B < C</div>
+                    <p>Число B = ${b} находится между A = ${a} и C = ${c}</p>
+                `;
+            } else if (secondInequality) {
+                resultHTML = `
+                    <p>Выполняется неравенство:</p>
+                    <div class="inequality false">A < B > C</div>
+                    <p>Число B = ${b} больше чем A = ${a}, и C = ${c}</p>
+                `;
+            } else {
+                resultHTML = `
+                    <p>Ни одно из указанных неравенств не выполняется</p>
+                `;
+            }
+
+            resultDiv.innerHTML = resultHTML;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма для отправки заказа</title>
+</head>
+<body>
+    <nav class="topnav">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="algorithm.html">Алгоритмическая задача</a></li>
+            <li><a style="color: brown" class="active" href="form.html">Форма</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Форма для отправки отзывов/заказов -->
+        <div class="additional-form">
+            <h2>Форма для заказов/отзывов</h2>
+
+            <form action="https://httpbin.io/post" method="POST" class="order-form">
+                <input type="hidden" name="form_type" value="order_feedback">
+
+                <div class="form-group">
+                    <label for="order_type">Тип заказа:</label>
+                    <input type="text" id="order_type" name="order_type" value="Оптимизация маршрута" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Количество маршрутов:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="100" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="priority">Приоритет:</label>
+                    <input type="number" id="priority" name="priority" min="1" max="10" value="5">
+                </div>
+
+                <div class="form-group">
+                    <label>Срочность:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="urgent_yes" name="urgent" value="yes">
+                        <label for="urgent_yes">Срочный</label>
+
+                        <input type="radio" id="urgent_no" name="urgent" value="no">
+                        <label for="urgent_no">Обычный</label>
+
+                        <input type="radio" id="urgent_s" name="urgent" value="no">
+                        <label for="urgent_s">Обычный</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Дополнительные услуги:</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="service_analysis" name="services" value="analysis" checked>
+                        <label for="service_analysis">Анализ результатов</label>
+
+                        <input type="checkbox" id="service_export" name="services" value="export">
+                        <label for="service_export">Экспорт данных</label>
+
+                        <input type="checkbox" id="service_support" name="services" value="support">
+                        <label for="service_support">Техническая поддержка</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="completion_date">Желаемая дата выполнения:</label>
+                    <input type="date" id="completion_date" name="completion_date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="feedback">Отзыв или комментарий:</label>
+                    <textarea id="feedback" name="feedback" rows="3" placeholder="Ваши комментарии..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="access_code">Код доступа:</label>
+                    <input type="password" id="access_code" name="access_code">
+                </div>
+
+                <input type="hidden" name="default_values" value="predefined_data">
+
+                <button type="submit">Отправить заказ/отзыв</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

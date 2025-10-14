@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная - Мой сайт</title>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="topnav">
+        <ul>
+            <li><a style="color: brown" class="active" href="index.html">Главная</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="about.html#services">Услуги (якорь)</a></li>
+            <li><a href="pasport.html">Паспорт</a></li>
+            <li><a href="algorithm.html">Алгоритмическая задача</a></li>
+            <li><a href="form.html">Форма</a></li>
+            <li><a href="https://www.google.com" target="_blank"><img src="https://cdn2.hubspot.net/hubfs/53/image8-2.jpg" height="30px"></a></li>
+        </ul>
+    </nav>
+
+    <!-- Основное содержимое -->
+    <main>
+        <h1>Добро пожаловать на наш сайт!</h1>
+
+        <!-- Внутренняя навигация -->
+        <div class="internal-nav">
+            <a href="#section1">Раздел 1</a> |
+            <a href="#section2">Раздел 2</a> |
+            <a href="#section3">Раздел 3</a>
+
+        </div>
+
+        <!-- Раздел со списками -->
+        <section id="section1">
+            <h2>Раздел 1: Списки</h2>
+
+            <h3>Нумерованный список:</h3>
+            <ol>
+                <li>Первый пункт</li>
+                <li>Второй пункт</li>
+                <li>Третий пункт</li>
+            </ol>
+
+            <h3>Маркированный список:</h3>
+            <ul>
+                <li>Элемент списка</li>
+                <li>Другой элемент</li>
+                <li>Еще один элемент</li>
+            </ul>
+
+            <h3>Вложенный список:</h3>
+            <ul>
+                <li>Основной пункт 1
+                    <ul>
+                        <li>Подпункт 1.1</li>
+                        <li>Подпункт 1.2</li>
+                    </ul>
+                </li>
+                <li>Основной пункт 2
+                    <ol>
+                        <li>Нумерованный подпункт 2.1</li>
+                        <li>Нумерованный подпункт 2.2</li>
+                    </ol>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Раздел с изображениями -->
+        <section id="section2">
+            <h2>Раздел 2: Изображения</h2>
+
+            <div class="image-gallery">
+                <h3>Миниатюры с увеличением:</h3>
+                <p>
+                    <a href="images/photo1-large.jpg" target="_blank">
+                        <img src="images/photo1-thumb.jpg" alt="winx" width="100" height="75" title="Добрые наклейки винкс">
+                    </a>
+                    <a href="images/photo2-large.jpg" target="_blank">
+                        <img src="images/photo2-thumb.jpg" alt="lemonade" width="100" height="75" title="Смешной чел с ключами" >
+                    </a>
+                </p>
+                <p><em>Смешные фото</em></p>
+            </div>
+        </section>
+
+        <!-- Раздел с таблицей -->
+        <section id="section3">
+            <h2>Раздел 3: Таблица с изображениями</h2>
+
+            <table style="background-image: url(images/table-bg.jpg)" class="styled-table">
+                <caption>Пример таблицы с различными элементами</caption>
+                <tr>
+                    <th>Изображение</th>
+                    <th>Описание</th>
+                    <th>Ссылка</th>
+                </tr>
+                <tr>
+                    <td><img src="images/photo1-thumb.jpg" alt="Миниатюра 1" width="80"></td>
+                    <td>Добрые наклейки винкс</td>
+                    <td><a href="about.html">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td><img src="images/photo2-thumb.jpg" alt="Миниатюра 2" width="80"></td>
+                    <td>Смешной чел с ключами</td>
+                    <td><a href="contacts.html">Контакты</a></td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Форма для контактных данных -->
+        <section class="form-section">
+            <h2>Форма для контактных данных</h2>
+
+            <form action="https://httpbin.io/post" method="POST" class="contact-form">
+                <input type="hidden" name="form_type" value="contact">
+
+                <div class="form-group">
+                    <label for="surname">Фамилия:</label>
+                    <input type="text" id="surname" name="surname" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="group">Группа:</label>
+                    <input type="text" id="group" name="group" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Мобильный телефон:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[+][7][0-9]{10}" placeholder="+79991234567">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Электронная почта:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Пароль (для примера):</label>
+                    <input type="password" id="password" name="password">
+                </div>
+
+                <div class="form-group">
+                    <label for="submission_date">Дата отправки:</label>
+                    <input type="date" id="submission_date" name="submission_date" required>
+                </div>
+
+                <button type="submit">Отправить данные</button>
+            </form> <br>
+            <div> <a href="#top">К началу</a> </div>
+        </section>
+    </main>
+
+</body>
+</html>
