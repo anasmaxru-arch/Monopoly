@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Главная - Мой сайт</title>
+    <title>Монополия</title>
 </head>
 <body>
     <!-- Навигация -->
@@ -11,11 +11,12 @@
             <li><a style="color: brown" class="active" href="index.html">Главная</a></li>
             <li><a href="about.html">О нас</a></li>
             <li><a href="contacts.html">Контакты</a></li>
-            <li><a href="about.html#services">Услуги (якорь)</a></li>
+            <li><a href="about.html#services">Услуги</a></li>
             <li><a href="pasport.html">Паспорт</a></li>
             <li><a href="algorithm.html">Алгоритмическая задача</a></li>
             <li><a href="form.html">Форма</a></li>
-            <li><a href="https://www.google.com" target="_blank"><img src="https://cdn2.hubspot.net/hubfs/53/image8-2.jpg" height="30px"></a></li>
+            <li><a href="dom.html">DOM_JS. Считываем информацию из DOM</a></li>
+            <li><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%D1%8F_(%D0%B8%D0%B3%D1%80%D0%B0)" target="_blank"><img src="https://cdn1.epicgames.com/offer/2730f9e6c3d442c6bb3ceb93027c9ba3/EGST_StoreLandscape_2560x1440_2560x1440-ffe3f54beeacebf626280ca641a54284" height="30px"></a></li>
         </ul>
     </nav>
 
@@ -32,81 +33,107 @@
         </div>
 
         <!-- Раздел со списками -->
-        <section id="section1">
-            <h2>Раздел 1: Списки</h2>
+       <section id="section1">
+    <h2>Раздел 1: Ход игры</h2>
 
-            <h3>Нумерованный список:</h3>
+    <h3>Подготвка к игре:</h3>
+    <ol>
+        <li>Подготовить игровое поле</li>
+        <li>Выбрать фишки игроков</li>
+        <li>Раздать стартовые деньги</li>
+        <li>Начать игру по часовой стрелке</li>
+    </ol>
+
+    <h3>Игровой комплект:</h3>
+    <ul>
+        <li>Кубики</li>
+        <li>Игровые фишки</li>
+        <li>Карточки «Шанс»</li>
+        <li>Карточки «Общественная казна»</li>
+        <li>Деньги банка</li>
+    </ul>
+
+    <h3>Функционал:</h3>
+    <ul>
+        <li>Типы собственности:
+            <ul>
+                <li>Улицы</li>
+                <li>Железные дороги</li>
+                <li>Коммунальные предприятия</li>
+            </ul>
+        </li>
+        <li>Действия игрока при ходе:
             <ol>
-                <li>Первый пункт</li>
-                <li>Второй пункт</li>
-                <li>Третий пункт</li>
+                <li>Бросить кубики</li>
+                <li>Передвинуть фишку</li>
+                <li>Совершить действие на клетке (купить, заплатить, взять карточку и т.д.)</li>
             </ol>
+        </li>
+    </ul>
+</section>
 
-            <h3>Маркированный список:</h3>
-            <ul>
-                <li>Элемент списка</li>
-                <li>Другой элемент</li>
-                <li>Еще один элемент</li>
-            </ul>
-
-            <h3>Вложенный список:</h3>
-            <ul>
-                <li>Основной пункт 1
-                    <ul>
-                        <li>Подпункт 1.1</li>
-                        <li>Подпункт 1.2</li>
-                    </ul>
-                </li>
-                <li>Основной пункт 2
-                    <ol>
-                        <li>Нумерованный подпункт 2.1</li>
-                        <li>Нумерованный подпункт 2.2</li>
-                    </ol>
-                </li>
-            </ul>
-        </section>
 
         <!-- Раздел с изображениями -->
         <section id="section2">
-            <h2>Раздел 2: Изображения</h2>
+            <h2>Раздел 2: Основные составляющие</h2>
 
             <div class="image-gallery">
                 <h3>Миниатюры с увеличением:</h3>
                 <p>
-                    <a href="images/photo1-large.jpg" target="_blank">
-                        <img src="images/photo1-thumb.jpg" alt="winx" width="100" height="75" title="Добрые наклейки винкс">
+                    <a href="https://i.pinimg.com/736x/e5/6d/e2/e56de2d6af45b68e7da9e124dc53b80a.jpg" target="_blank">
+                        <img src="https://i.pinimg.com/736x/e5/6d/e2/e56de2d6af45b68e7da9e124dc53b80a.jpg" alt="Валюта" width="100" height="75" title="Валюта">
                     </a>
-                    <a href="images/photo2-large.jpg" target="_blank">
-                        <img src="images/photo2-thumb.jpg" alt="lemonade" width="100" height="75" title="Смешной чел с ключами" >
+                    <a href="https://i.pinimg.com/736x/a2/07/38/a2073828924463493f0cb2a59dd63cf2.jpg" target="_blank">
+                        <img src="https://i.pinimg.com/736x/a2/07/38/a2073828924463493f0cb2a59dd63cf2.jpg" alt="Игровое поле" width="100" height="75" title="Игровое поле" >
                     </a>
                 </p>
-                <p><em>Смешные фото</em></p>
+                <p><em>Наполнение</em></p>
             </div>
         </section>
 
         <!-- Раздел с таблицей -->
         <section id="section3">
-            <h2>Раздел 3: Таблица с изображениями</h2>
+           <h2>Раздел 3: Таблица с изображениями</h2>
 
-            <table style="background-image: url(images/table-bg.jpg)" class="styled-table">
-                <caption>Пример таблицы с различными элементами</caption>
-                <tr>
-                    <th>Изображение</th>
-                    <th>Описание</th>
-                    <th>Ссылка</th>
-                </tr>
-                <tr>
-                    <td><img src="images/photo1-thumb.jpg" alt="Миниатюра 1" width="80"></td>
-                    <td>Добрые наклейки винкс</td>
-                    <td><a href="about.html">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td><img src="images/photo2-thumb.jpg" alt="Миниатюра 2" width="80"></td>
-                    <td>Смешной чел с ключами</td>
-                    <td><a href="contacts.html">Контакты</a></td>
-                </tr>
-            </table>
-        </section>
+<table style="background-image: url(https://i.pinimg.com/736x/3d/f7/dc/3df7dc6045b5f7081fad186a52d0919c.jpg)" class="styled-table">
+    <caption>Элементы из игры «Монополия»</caption>
+    <tr>
+        <th>Изображение</th>
+        <th>Описание</th>
+        <th>Ссылка</th>
+    </tr>
+    <tr>
+        <td><img src="https://i.pinimg.com/736x/b7/9c/c7/b79cc70a31f0e08b6cb04eb88677227c.jpg" alt="Игровое поле" width="80"></td>
+        <td>Классическое игровое поле с улицами, станциями и коммунальными службами.</td>
+        <td><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%D1%8F_(%D0%B8%D0%B3%D1%80%D0%B0)#%D0%9F%D1%80%D0%B5%D0%B4%D1%8B%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F:_%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D1%82%D0%B8%D0%BF%D1%8Bы">Подробнее</a></td>
+    </tr>
+    <tr>
+        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcbVn6RisN_yU5E2tZ1JzPlIxEOcYRerO3lQ&s" alt="Фишки игроков" width="80"></td>
+        <td>Набор металлических фигурок: шляпа, машинка, утка, собачка и другие.</td>
+        <td><a href="https://www.rbc.ru/life/news/63761b5a9a79473b08788717">Посмотреть</a></td>
+    </tr>
+    <tr>
+        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRubexx8pbOIyfKuPyTy5PlZ1_e-J6gd4M62w&s" alt="Карточки собственности" width="80"></td>
+        <td>Карточки собственности с названиями улиц и арендной платой.</td>
+        <td><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%D1%8F_(%D0%B8%D0%B3%D1%80%D0%B0)#%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0">Подробнее</a></td>
+    </tr>
+    <tr>
+        <td><img src="https://i.pinimg.com/1200x/43/f6/ee/43f6ee328e216ece82966842a2b9ff2b.jpg" alt="Деньги Монополии" width="80"></td>
+        <td>Игровая валюта разных номиналов: от 1 до 500 монополий.</td>
+        <td><a href="https://planeta-igr.com/image/data/instrukcii/58420.pdf">Подробнее</a></td>
+    </tr>
+    <tr>
+        <td><img src="https://i.pinimg.com/1200x/92/12/04/921204dc8d7dcfa22c4a9dd492bf1642.jpg" alt="Дома и отели" width="80"></td>
+        <td>Пластиковые дома и отели для застройки собственности.</td>
+        <td><a href="https://hotel.tutu.ru/">Подробнее</a></td>
+    </tr>
+    <tr>
+        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRftmQy2MEmiXP19-wP6W4Y37oQyvWxra9CNQ&s" alt="Карточки Шанс" width="80"></td>
+        <td>Карточки «Шанс» и «Общественная казна» с сюрпризами для игроков.</td>
+        <td><a href="https://www.reddit.com/r/boardgames/comments/zzugiy/monopoly_chance_and_chest_cards/?tl=ru">Подробнее</a></td>
+    </tr>
+</table>
+
 
         <!-- Форма для контактных данных -->
         <section class="form-section">

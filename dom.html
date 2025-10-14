@@ -2,24 +2,25 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Изменяем кириллицу на латиницу по клику</title>
+    <title>DOM_JS. Считываем информацию из DOM</title>
 </head>
 <body>
     <nav class="topnav">
         <ul>
+            <li><a style="color: brown" href="dom.html">DOM_JS. Считываем информацию из DOM</a></li>
             <li><a href="index.html">Главная</a></li>
-            <li><a style="color: brown" class="active" href="pasport.html">Паспорт</a></li>
+            <li><a class="active" href="pasport.html">Паспорт</a></li>
             <li><a href="algorithm.html">Алгоритмическая задача</a></li>
         </ul>
     </nav>
 
     <main>
-        <h1>Изменяем кириллицу на латиницу по клику</h1>
+        <h1>DOM_JS. Считываем информацию из DOM</h1>
 
         <!-- Данные паспорта -->
         <div class="passport-data">
             <h2>Данные паспорта (страницы 2-3)</h2>
-             <img src="images/Прямоугольник 1 (1).jpg" height="200px"/>
+            <img src="images/Прямоугольник 1 (1).jpg" height="200px"/>
             <p>Фамилия: <span id="surname">Рубцова</span></p>
             <p>Имя: <span id="name">Анастасия</span></p>
             <p>Отчество: <span>Максимовна</span></p>
@@ -27,22 +28,10 @@
             <p>Дата рождения: <span id="birth-year">23.08.2006</span></p>
             <p>Место рождения: <span>г. Москва</span></p>
             <p>Код подразделения: <span>770-098</span></p>
-            <p id="for_click">кликните здесь</p>
         </div>
+        <img src="images/screenshot.jpg"  width="600" height="300">
+
     </main>
 
-    <script>
-        function changelang() {
-
-            const new_surname  = document.getElementById('surname')
-            const new_name  = document.getElementById('name')
-            new_surname.innerHTML="<b>Rubtsova</b>"
-            new_name.innerHTML="<b>Anastasia</b>"
-        }
-
-        const node_for_click = document.getElementById("for_click")
-        node_for_click.addEventListener("click",changelang)
-
-    </script>
 </body>
 </html>

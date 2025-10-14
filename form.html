@@ -16,74 +16,82 @@
     <main>
         <!-- Форма для отправки отзывов/заказов -->
         <div class="additional-form">
-            <h2>Форма для заказов/отзывов</h2>
+    <h2>Форма заказа / отзывов по Монополии</h2>
 
-            <form action="https://httpbin.io/post" method="POST" class="order-form">
-                <input type="hidden" name="form_type" value="order_feedback">
+    <form action="https://httpbin.io/post" method="POST" class="order-form">
+        <input type="hidden" name="form_type" value="monopoly_order_feedback">
 
-                <div class="form-group">
-                    <label for="order_type">Тип заказа:</label>
-                    <input type="text" id="order_type" name="order_type" value="Оптимизация маршрута" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="quantity">Количество маршрутов:</label>
-                    <input type="number" id="quantity" name="quantity" min="1" max="100" value="1" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="priority">Приоритет:</label>
-                    <input type="number" id="priority" name="priority" min="1" max="10" value="5">
-                </div>
-
-                <div class="form-group">
-                    <label>Срочность:</label>
-                    <div class="radio-group">
-                        <input type="radio" id="urgent_yes" name="urgent" value="yes">
-                        <label for="urgent_yes">Срочный</label>
-
-                        <input type="radio" id="urgent_no" name="urgent" value="no">
-                        <label for="urgent_no">Обычный</label>
-
-                        <input type="radio" id="urgent_s" name="urgent" value="no">
-                        <label for="urgent_s">Обычный</label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label>Дополнительные услуги:</label>
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="service_analysis" name="services" value="analysis" checked>
-                        <label for="service_analysis">Анализ результатов</label>
-
-                        <input type="checkbox" id="service_export" name="services" value="export">
-                        <label for="service_export">Экспорт данных</label>
-
-                        <input type="checkbox" id="service_support" name="services" value="support">
-                        <label for="service_support">Техническая поддержка</label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="completion_date">Желаемая дата выполнения:</label>
-                    <input type="date" id="completion_date" name="completion_date" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="feedback">Отзыв или комментарий:</label>
-                    <textarea id="feedback" name="feedback" rows="3" placeholder="Ваши комментарии..."></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="access_code">Код доступа:</label>
-                    <input type="password" id="access_code" name="access_code">
-                </div>
-
-                <input type="hidden" name="default_values" value="predefined_data">
-
-                <button type="submit">Отправить заказ/отзыв</button>
-            </form>
+        <div class="form-group">
+            <label for="order_type">Тип запроса:</label>
+            <select id="order_type" name="order_type" required>
+                <option value="purchase">Заказ настольной игры</option>
+                <option value="accessory">Покупка аксессуаров</option>
+                <option value="feedback">Оставить отзыв</option>
+                <option value="support">Техническая поддержка</option>
+            </select>
         </div>
+
+        <div class="form-group">
+            <label for="quantity">Количество наборов:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="20" value="1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="edition">Выберите издание:</label>
+            <select id="edition" name="edition" required>
+                <option value="classic">Классическая Монополия</option>
+                <option value="deluxe">Монополия Deluxe</option>
+                <option value="city">Монополия: Город</option>
+                <option value="custom">Персонализированная версия</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Тип доставки:</label>
+            <div class="radio-group">
+                <input type="radio" id="delivery_fast" name="delivery" value="fast">
+                <label for="delivery_fast">Экспресс-доставка</label>
+
+                <input type="radio" id="delivery_standard" name="delivery" value="standard" checked>
+                <label for="delivery_standard">Стандартная доставка</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Дополнительные опции:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="service_wrapping" name="services" value="wrapping" checked>
+                <label for="service_wrapping">Подарочная упаковка</label>
+
+                <input type="checkbox" id="service_signature" name="services" value="signature">
+                <label for="service_signature">Автограф создателя</label>
+
+                <input type="checkbox" id="service_custom_board" name="services" value="custom_board">
+                <label for="service_custom_board">Персонализированное игровое поле</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="completion_date">Желаемая дата получения:</label>
+            <input type="date" id="completion_date" name="completion_date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="feedback">Комментарий или отзыв:</label>
+            <textarea id="feedback" name="feedback" rows="3" placeholder="Поделитесь впечатлениями или пожеланиями..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="access_code">Код участника клуба «Монополия» (если есть):</label>
+            <input type="password" id="access_code" name="access_code">
+        </div>
+
+        <input type="hidden" name="default_values" value="monopoly_data">
+
+        <button type="submit">Отправить заявку / отзыв</button>
+    </form>
+</div>
+
     </main>
 </body>
 </html>
